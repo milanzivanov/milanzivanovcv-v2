@@ -25,8 +25,3 @@ function clickOutside(e) {
         modal.style.display = "none";
     }
 }
-
-// particlesjs
-particlesJS.load('particles-js', '../js/particlesjs.json', function() {
-    console.log('Particles.js working!!!');
-});
