@@ -91,14 +91,6 @@ h1 {
   transition: 0.3s all ease-out;
   position: relative;
   z-index: 10;
-	animation-name: pulse;
-	animation-duration: 5000ms;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-  &:hover {
-    color: #06f;
-    animation: none;
-  }
 }
 
 h2 {
@@ -166,25 +158,61 @@ a {
   @include links;
 }
 
-// animation
-@keyframes pulse {
-  0% { transform: scale(1); }
-  30% { transform: scale(1); }
-  40% { transform: scale(1.08); }
-  50% { transform: scale(1); }
-  60% { transform: scale(1); }
-  70% { transform: scale(1.05); }
-  80% { transform: scale(1); }
-  100% { transform: scale(1); }
+// tn effect
+.main {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  z-index: 15;
+  h1 {
+    font-family: 'ns', 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 60px;
+    order: -1;
+    span {
+      color: #eee;
+      display: inline-block;
+      background: black;
+      margin-bottom: 5px;
+      padding: 0 0.2em;
+      transition: all 100ms ease-in-out;
+    }
+  }
+}
+
+.cta {
+  display: inline-block;
+  background: #eee;
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 0.4em;
+  transition: all 100ms ease-in-out;
+  &:hover {
+    color: #f8d902;
+    background: black;
+  }
+}
+
+.cta:hover ~ h1 span {
+  color: black;
+  background: #fff;
+}
+
+.cta .fa.fa-chevron-right {
+  font-size: 0.8em;
+  margin-left: 0.3em;
 }
 
 // responsive part
 @media (max-width: 1024px) {
-  h1 {
-      font-size:2.5rem
+  .main h1 {
+      font-size: 2.5rem
   }
-
-  h2 {
+  .cta {
       font-size: 1.25rem
   }
 }
