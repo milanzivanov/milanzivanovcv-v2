@@ -2,7 +2,8 @@ p {
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 1.75;
-  margin: 2rem 0; }
+  margin: 2rem 0;
+  text-align: justify; }
 
 .modal {
   display: none;
