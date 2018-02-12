@@ -45,6 +45,10 @@ section.s1, section.s4, section.s2 {
   min-height: 100vh;
 }
 
+section.s4 {
+    background-image: url('../images/bg-wire.svg');
+}
+
 #particles-js {
   height: 100vh;
   position: absolute;
